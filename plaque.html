@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Maze Adventure </title>
+        <link rel="icon" href = "assets/magnify.png"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 class = "center text-purple"> <span class = 'medieval-font'> Mysterious writing permeates this surface. </span></h1>
+        <hr>
+
+        <div class = "center">
+            <img src = 'assets/plaque.jpg' width = "600">
+        </div>
+        <hr>
+        <p class = "center">
+            <button width = 125><a class = "text-green" id = 'statue' href = 'statue.html'><span class = 'medieval-font'> Go Back. </span></a></button>
+        </p>
+        <div class = "center">
+            <iframe src='inventory.html' id=inventory height=100 width=125></iframe>
+        </div>
+        <script>
+            inventory.src += location.search;
+            statue.href += location.search;
+        </script>
+    </body>
+</html>

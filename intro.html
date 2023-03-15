@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title> Maze Adventure </title>
+        <link rel="icon" href = "assets/magnify.png"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 class = "center text-purple"> <span class = 'medieval-font'> You awake to an oppressive sun and a sylvian oasis. </span></h1>
+        <hr>
+
+        <div class = "center">
+            <img src = 'assets/start.jpg' width = "240">
+        </div>
+        
+        <p class = "center"> 
+            <a class = "text-yellow"><span class = 'medieval-font'> After collecting yourself, you decide to explore further. </span></a><hr>
+            <div class = "center">
+                <button><a class = "text-green" id = 'wolf' href = 'wolf.html'><span class = 'medieval-font'> Go Left. </span></a></button>
+                <button><a class = "text-green" id = 'plank' href = 'plank.html'><span class = 'medieval-font'> Go Right. </span></a></button>
+                <button><a class = "text-green" id = 'statue' href = 'statue.html'><span class = 'medieval-font'> Go Straight. </span></a></button>
+            </div>
+        </p>
+        <div class = "center">
+            <iframe src='inventory.html' id=inventory height=100 width=125></iframe>
+        </div>
+        <script>
+            wolf.href += location.search;
+            plank.href += location.search;
+            statue.href += location.search;
+            inventory.src += location.search;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- inventory in plain text followed by a line -->
+        <table class = "center">
+            <!-- table rows, heads, and data -->
+            <tr>
+                <th> &#129683; </th>    <!-- axe emoji since plank or wood could not be found-->
+            <tr>
+                
+                <td id="plank">0</td>
+            </tr>
+        </table>
+        <script>
+            var queryString = new URLSearchParams(location.search);
+
+            // getter methods
+            plank.innerText = queryString.get("plank");
+        </script>
+    </body>
+</html>

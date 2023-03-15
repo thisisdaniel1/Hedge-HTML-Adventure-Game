@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> Maze Adventure </title>
+        <link rel="icon" href = "assets/magnify.png"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 class = "center text-purple"><span class = 'medieval-font'> You encounter an angry gardener. </span></h1>
+        <hr>
+
+        <div class = "center">
+            <img src = 'assets/wolf.jpg' width = "240">
+        </div>
+        <hr>
+        
+        <p> 
+            <div class = "center">
+                <a id = interaction></a>
+                <button onclick = "interact()"><a class = "text-green" id = gameOver><span class = 'medieval-font'>Attempt to explain yourself.</span></a></button>
+            </div>
+        </p>
+        <div class = "center">
+            <iframe src='inventory.html' id=inventory height=100 width=125></iframe>
+        </div>
+        <script>
+            inventory.src += location.search;
+
+            function interact(){
+                interaction.innerHTML = `<a class = "text-yellow"><span class = 'medieval-font'> All your attempts had failed and, after slipping a bag over your head, he dragged you back to the start. Game Over. </span></a>`
+                gameOver.innerHTML = `<a class = "text-green" href='index.html'><span class = 'medieval-font'> Go back to Start. </span></a>`
+            }
+        </script>
+    </body>
+</html>

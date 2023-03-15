@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title> Maze Adventure </title>
+        <link rel="icon" href = "assets/magnify.png"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 class = "center text-purple"> <span class = 'medieval-font'> You see a line of planks lying on the ground. You should be able to come back to pick up more planks if needed. </span></h1>
+        <hr>
+
+        <div class = "center">
+            <img id = "plankImg" src = "assets/new-plank.jpg" width = "240">
+        </div>
+        <hr>
+
+        <div class = "center" id='options'>
+            <button class = "text-green" onclick='addPlank()'><span class = 'medieval-font'> Pick up a plank. </span></button>
+            <a id='intro' href='intro.html'>
+                <button class = "text-green"><span class = 'medieval-font'> Go back to the start. </span></button>
+            </a>
+        </div>
+        <div class = "center">
+            <iframe src='inventory.html' id=inventory height=100 width=125></iframe>
+        </div>
+        <script>
+            inventory.src += location.search;
+            intro.href += location.search;
+            var queryString = new URLSearchParams(location.search);
+            var plank = +queryString.get("plank");
+
+            function addPlank(){
+                plankImg.src = "assets/no-plank.jpg";
+                queryString.set("plank",plank+1);
+                inventory.src = "inventory.html?"+queryString;
+                intro.href = "intro.html?"+queryString;
+            }
+        </script>
+    </body>
+</html>

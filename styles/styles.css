@@ -1,0 +1,75 @@
+body{
+    background-color: darkolivegreen;
+}
+
+.text-purple{
+    color:purple;
+}
+
+.text-green{
+    color:green;
+}
+
+.text-yellow{
+    color:goldenrod;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* defines a flexbox to hang on the right of the screen, with items being flex items in a flex container */
+.inventory{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    column-gap: 10px;
+}   
+
+.grid-container{
+    width:450px;
+    max-width: 450px;
+    /* align to center of screen */
+    margin:0 auto;
+
+    display:grid;
+    /* 3 columns each with a width of 1fr
+    total width will be divided between three
+    columns, with each column taking 1 fraction of space*/
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 rows each with a height of 1fr */
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-long{
+    width: 240px;
+    height: 560px;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.grid-item{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin:auto;
+}
+
+.grid-item-long{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    margin:auto;
+}
+
+.medieval-font{
+    font-family: "MedievalSharp";
+}
+
+button:hover{
+    background-color:brown;
+}

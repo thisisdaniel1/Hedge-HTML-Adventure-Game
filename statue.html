@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title> Maze Adventure </title>
+        <link rel="icon" href = "assets/magnify.png"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    </head>
+
+    <body>
+        <h3 class = "center text-purple"> <span class = 'medieval-font'>You find a statue with a strange plaque and paths leading in several directions.</span></h1>
+        <hr>
+
+        <div class = "grid-long">
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s1.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s2.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s3.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s4.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s5.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s6.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s7.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s8.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s9.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s10.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s11.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s12.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s13.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s14.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s15.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s16.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s17.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s18.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s19.jpg">
+            </a>
+            <a class="grid-item-long" id = "plaque" href = "plaque.html">
+                <img src = "assets/statue_slices/s20.jpg">
+            </a>
+            <a class="grid-item-long" href = "#">
+                <img src = "assets/statue_slices/s21.jpg">
+            </a>
+        </div>
+        <hr>
+        <p class = "center">
+            <button><span class = 'medieval-font'><a class = "text-green" id = 'bad' href = 'bad.html'>Go Left.</a></span></button>
+            <button><span class = 'medieval-font'><a class = "text-green" id = 'good' href = 'good.html'>Go Right.</a></span></button>
+            <button><span class = 'medieval-font'><a class = "text-green" id = 'deadend' href = 'deadend.html'>Go Straight.</a></span></button>
+            <button><span class = 'medieval-font'><a class = "text-green" id = 'intro' href = 'intro.html'>Go Back.</a></span></button>
+        </p>
+        <div class = "center">
+            <iframe src='inventory.html' id=inventory height=100 width=125></iframe>
+        </div>
+        <script>
+            bad.href += location.search;
+            good.href += location.search;
+            deadend.href += location.search;
+            intro.href += location.search;
+            plaque.href += location.search;
+            inventory.src += location.search;
+        </script>
+    </body>
+</html>

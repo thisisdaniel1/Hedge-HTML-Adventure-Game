@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title> Maze Adventure </title>
+        <link rel="icon" href = "assets/magnify.png"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 class = "center text-purple"> <span class = 'medieval-font'>Upon heading straight, you stumble upon an unpassable wall of grass.. </span></h1>
+        <hr>
+
+        <div class = "center">
+            <img src = 'assets/deadend.jpg' width = "240">
+        </div>
+        <hr>
+        
+        <p class = "center"> 
+            <button><a class = "text-green" id = 'statue' href = 'statue.html'><span class = 'medieval-font'>You double back, following the hand impressions you had made getting there..</span></a></button>
+        </p>
+        <div class = "center">
+            <iframe src='inventory.html' id=inventory height=100 width=125></iframe>
+        </div>
+        <script>
+            inventory.src += location.search;
+            statue.href += location.search;
+        </script>
+    </body>
+</html>

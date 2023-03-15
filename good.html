@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title> Maze Adventure </title>
+        <link rel="icon" href = "assets/magnify.png"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 class = "center text-purple"> <span class = 'medieval-font'> You encounter a body of water. Wider than it is long, you might be able to swim it. </span></h1>
+        <hr>
+
+        <div class = "center">
+            <img id = 'sinkhole' src = 'assets/shortsinkhole.jpg' width = "240">
+        </div>
+        <hr>
+
+        <div class = "center" id = 'options'>
+            <button id = 'plankText' onclick='plankAction()'><a class = "text-green"><span class = 'medieval-font'> Attempt to Cross. </span></a></button>
+            <button><a class = "text-green" id = 'statue' href = 'statue.html'><span class = 'medieval-font'> Go Back. </span></a></button>
+        </div>
+        <a class = "center" id = endMessage></a>
+        <div class = "center">
+            <iframe src='inventory.html' id=inventory height=100 width=125></iframe>
+        </div>
+        <script>
+            inventory.src += location.search;
+            statue.href += location.search;
+
+            var queryString = new URLSearchParams(location.search);
+            //cast queryString into Number
+            var plankCount = +queryString.get("plank");
+
+            function plankAction(){
+                if (plankCount > 0){
+                    sinkhole.src = 'assets/plankbridge.jpg';
+                    options.innerHTML = `<a class = "text-yellow"><span class = 'medieval-font'> You've remained in the maze for so long, you had dared hope it would ever end. <br> But as luck would have it, placing the plank as a bridge worked and at the end lay your salvation. </span></a><br>`;
+                    endMessage.innerHTML = `<a class = "text-yellow" href="index.html"><span class = 'medieval-font'> The End. </span></a>`;
+                }
+                else{
+                    options.innerHTML = `<a class = "text-yellow" href='index.html'><span class = 'medieval-font'> Despite your best efforts, the turbulent water plus the scorching heat caused you to pass out. Luckily, you woke back at the start. </span></a>`;
+                }
+            }
+        </script>
+    </body>
+</html>
